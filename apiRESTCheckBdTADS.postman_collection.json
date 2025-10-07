@@ -1,0 +1,227 @@
+{
+	"info": {
+		"_postman_id": "8754cc58-a7a9-4e67-962d-4b0ee152cda2",
+		"name": "apiRESTCheckBdTADS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48033497",
+		"_collection_link": "https://l22200210-8058492.postman.co/workspace/Team-Workspace~a31ea3e8-308c-4c47-8822-4341c469b176/collection/48033497-8754cc58-a7a9-4e67-962d-4b0ee152cda2?action=share&source=collection_link&creator=48033497"
+	},
+	"item": [
+		{
+			"name": "Pruebas Generales",
+			"item": [
+				{
+					"name": "getMySqlConnectionCheckBd",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44382//check/checkbd/mysqlconectioncheckbd",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44382",
+							"path": [
+								"",
+								"check",
+								"checkbd",
+								"mysqlconectioncheckbd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getVwRptUsuario",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nombre\": \"sample string 2\",\r\n  \"apellidoPaterno\": \"sample string 3\",\r\n  \"apellidoMaterno\": \"sample string 4\",\r\n  \"usuario\": \"sample string 5\",\r\n  \"contrasena\": \"sample string 6\",\r\n  \"ruta\": \"sample string 7\",\r\n  \"tipo\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44339/tads/Usuario/vwrptusuario",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44339",
+							"path": [
+								"tads",
+								"Usuario",
+								"vwrptusuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "spdelusuario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cve\": \"5\",\r\n    \"nombre\": \"Juan\",\r\n    \"apellidoPaterno\": \"Hernandez\",\r\n    \"apellidoMaterno\": \"Lopez\",\r\n    \"usuario\": \"jhernandez\",\r\n    \"contrasena\": \"12345\",\r\n    \"ruta\": \"/img/jh.png\",\r\n    \"tipo\": \"1\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44339/tads/Usuario/spdelusuario?clave=5\n",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44339",
+							"path": [
+								"tads",
+								"Usuario",
+								"spdelusuario"
+							],
+							"query": [
+								{
+									"key": "clave",
+									"value": "5\n"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "vwtipousuario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44339/tads/usuario/vwtipousuario",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44339",
+							"path": [
+								"tads",
+								"usuario",
+								"vwtipousuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "spupdusuario",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cve\": \"5\",\r\n    \"nombre\": \"Juan\",\r\n    \"apellidoPaterno\": \"Hernandez\",\r\n    \"apellidoMaterno\": \"Lopez\",\r\n    \"usuario\": \"jhernandez\",\r\n    \"contrasena\": \"12345\",\r\n    \"ruta\": \"/img/jh.png\",\r\n    \"tipo\": \"1\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44339/tads/Usuario/spupdusuario",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44339",
+							"path": [
+								"tads",
+								"Usuario",
+								"spupdusuario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "vwrptusuariofiltro?filtro",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44339/tads/usuario/vwrptusuariofiltro?filtro=ez",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44339",
+							"path": [
+								"tads",
+								"usuario",
+								"vwrptusuariofiltro"
+							],
+							"query": [
+								{
+									"key": "filtro",
+									"value": "ez"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "spvalidaracceso",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44339/tads/usuario/spvalidaracceso",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44339",
+							"path": [
+								"tads",
+								"usuario",
+								"spvalidaracceso"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44339/tads/usuario/spinsusuario",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44339",
+							"path": [
+								"tads",
+								"usuario",
+								"spinsusuario"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
